@@ -46,27 +46,32 @@ const contactItems = [
 export default function Contact() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#020617] px-5 pb-24 pt-36 text-white lg:px-8">
-      <section className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <section className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, ease: "easeOut" }}
+          className="mx-auto max-w-6xl text-center"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.28em] text-cyan-300">
+          <p className="text-sm font-black uppercase tracking-[0.45em] text-cyan-300">
             Contact
           </p>
 
-          <h1 className="mt-5 text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Let’s build intelligent software that solves real problems.
+          <h1 className="mx-auto mt-6 max-w-5xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
+            Let’s build{" "}
+            <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              intelligent software
+            </span>{" "}
+            that solves real problems.
           </h1>
 
-          <p className="mt-7 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
             For AI-powered applications, machine learning systems, dashboards,
             automation tools, full-stack platforms, or data-driven solutions,
-            contact me directly through the channels listed here.
+            contact me directly through the channels listed below.
           </p>
 
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href={`mailto:${personal.email}`}
               className="inline-flex items-center justify-center gap-3 rounded-full bg-cyan-300 px-7 py-4 text-sm font-black text-slate-950 shadow-[0_0_42px_rgba(34,211,238,0.25)] transition hover:bg-cyan-200"
@@ -87,7 +92,7 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="mx-auto mt-16 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {contactItems.map((item, index) => (
             <ContactCard key={item.label} item={item} index={index} />
           ))}

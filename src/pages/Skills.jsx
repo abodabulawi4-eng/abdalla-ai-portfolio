@@ -11,9 +11,10 @@ export default function Skills() {
           title="Technical stack built for AI, data, and full-stack systems."
           description="No progress bars, no fake percentages. Skills are grouped by real usage across AI modeling, data workflows, web systems, databases, tools, and project execution."
           align="center"
+          maxWidth="max-w-6xl"
         />
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-3">
           {skills.map((group, index) => (
             <SkillGroup key={group.category} group={group} index={index} />
           ))}
