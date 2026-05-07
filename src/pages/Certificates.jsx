@@ -33,7 +33,9 @@ export default function Certificates() {
       <section className="mx-auto max-w-7xl">
         <SectionTitle
           eyebrow="Certificates"
-          title="Verified learning in Python, data science, SQL, and development."
+          title="Verified learning in Python,"
+          highlight="data science, SQL,"
+          afterHighlight=" and development."
           description="A focused set of certificates supporting my work in AI, data analysis, programming, and software development."
           align="center"
           maxWidth="max-w-6xl"
