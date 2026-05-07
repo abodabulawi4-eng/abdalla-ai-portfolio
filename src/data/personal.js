@@ -18,16 +18,16 @@ export const personal = {
   hero: {
     headline: "Building AI-powered systems that transform data into intelligent solutions.",
     subtitle:
-      "AI Developer focused on machine learning, computer vision, data science, automation, and full-stack intelligent applications.",
+      "I design and develop intelligent software solutions using machine learning, data science, computer vision, automation, and full-stack web technologies.",
     primaryCta: "View Projects",
     secondaryCta: "Contact Me",
   },
 
-  bio: "I am an Artificial Intelligence and Data Science graduate from Zarqa Private University, focused on building intelligent software solutions using machine learning, computer vision, data analytics, and full-stack development. My work combines AI models, clean system architecture, and practical applications designed to solve real-world problems.",
+  bio: "Artificial Intelligence and Data Science Graduate focused on building AI-powered applications, machine learning systems, data analysis tools, and full-stack platforms that solve real-world problems.",
 
   about: {
     intro:
-      "I am an Artificial Intelligence and Data Science graduate from Zarqa Private University, focused on building intelligent software solutions using machine learning, computer vision, data analytics, and full-stack development. My work combines AI models, clean system architecture, and practical applications designed to solve real-world problems.",
+      "I am an Artificial Intelligence and Data Science graduate with a strong focus on building practical AI-powered software. My work combines machine learning, data analysis, automation, computer vision, and full-stack development to create systems that are useful, scalable, and clear in purpose.",
     education:
       "I studied Artificial Intelligence and Data Science at Zarqa Private University, where I built a foundation in data processing, model development, intelligent systems, and software engineering.",
     focus:
@@ -51,8 +51,8 @@ export const personal = {
       label: "AI & Data Science Graduate",
     },
     {
-      value: "FS",
-      label: "Full-Stack AI Projects",
+      value: "7+",
+      label: "Practical Projects",
     },
     {
       value: "ML",
@@ -60,7 +60,7 @@ export const personal = {
     },
     {
       value: "JO",
-      label: "Based in Jordan",
+      label: "Jordan Based",
     },
   ],
 
