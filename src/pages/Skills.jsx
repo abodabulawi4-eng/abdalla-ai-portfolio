@@ -8,7 +8,9 @@ export default function Skills() {
       <section className="mx-auto max-w-7xl">
         <SectionTitle
           eyebrow="Skills"
-          title="Technical stack built for AI, data, and full-stack systems."
+          title="Technical stack built for"
+          highlight="AI, data,"
+          afterHighlight=" and full-stack systems."
           description="No progress bars, no fake percentages. Skills are grouped by real usage across AI modeling, data workflows, web systems, databases, tools, and project execution."
           align="center"
           maxWidth="max-w-6xl"
