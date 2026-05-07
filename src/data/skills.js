@@ -1,6 +1,6 @@
 export const skills = [
   {
-    category: "Programming Languages",
+    category: "Programming",
     items: ["Python", "JavaScript", "HTML", "CSS", "SQL"],
   },
   {
@@ -18,7 +18,7 @@ export const skills = [
     ],
   },
   {
-    category: "Libraries & Frameworks",
+    category: "Frameworks & Libraries",
     items: [
       "NumPy",
       "Pandas",
@@ -47,7 +47,7 @@ export const skills = [
     items: ["MongoDB", "MySQL"],
   },
   {
-    category: "Tools & Platforms",
+    category: "Tools",
     items: [
       "Git",
       "GitHub",
