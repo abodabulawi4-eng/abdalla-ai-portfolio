@@ -43,23 +43,46 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.55, ease: "easeOut" }}
-          className="max-w-3xl"
+          className="mx-auto max-w-4xl text-center"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.28em] text-cyan-300">
+          <p className="text-sm font-bold uppercase tracking-[0.45em] text-cyan-300">
             Projects
           </p>
 
-          <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Practical systems with a strong AI and data direction.
+          <h2 className="mx-auto mt-5 max-w-5xl text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+            AI-first systems,{" "}
+            <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              intelligent automation
+            </span>
+            , and full-stack engineering.
           </h2>
 
-          <p className="mt-6 text-base leading-8 text-slate-300">
-            The strongest projects are placed first. Smaller projects are still
-            included, but they do not compete with the AI-focused work.
+          <p className="mx-auto mt-7 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+            A focused collection of AI, computer vision, data science, and
+            full-stack projects built around real problems, structured
+            solutions, and practical technical execution.
           </p>
+
+          <div className="mx-auto mt-10 flex max-w-4xl flex-wrap items-center justify-center gap-3">
+            {[
+              "AI",
+              "Machine Learning",
+              "Computer Vision",
+              "Full-Stack",
+              "Data Science",
+              "Automation",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-cyan-400/20 bg-white/[0.04] px-5 py-3 text-sm font-bold text-slate-200 shadow-[0_0_25px_rgba(34,211,238,0.06)]"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </motion.div>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-2">
+        <div className="mt-16 grid gap-6 lg:grid-cols-2">
           {featuredProjects.map((project, index) => {
             const Icon = projectIcons[project.name] || FiCpu;
 
