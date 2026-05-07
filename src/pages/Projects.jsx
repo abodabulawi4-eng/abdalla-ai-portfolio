@@ -3,7 +3,6 @@ import { useMemo, useState } from "react";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 import ProjectModal from "../components/ProjectModal";
-import SectionTitle from "../components/SectionTitle";
 
 const filters = [
   "All",
@@ -60,35 +59,50 @@ export default function Projects() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#020617] px-5 pb-24 pt-36 text-white lg:px-8">
       <section className="mx-auto max-w-7xl">
-        <SectionTitle
-          eyebrow="Projects"
-          title="AI-first work, full-stack systems, and practical automation."
-          description="Projects are not shown with fake demo links. Each card opens real project details: problem, solution, technologies, and future AI enhancements."
-        />
+        {/* Projects Hero */}
+        <div className="mx-auto max-w-6xl text-center">
+          <p className="text-sm font-black uppercase tracking-[0.45em] text-cyan-300">
+            Projects
+          </p>
 
-        <div className="mt-10 flex flex-wrap gap-3">
-          {filters.map((filter) => {
-            const isActive = activeFilter === filter;
+          <h1 className="mx-auto mt-6 max-w-5xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
+            AI-first systems,{" "}
+            <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              intelligent automation
+            </span>
+            , and full-stack engineering.
+          </h1>
 
-            return (
-              <button
-                key={filter}
-                type="button"
-                onClick={() => setActiveFilter(filter)}
-                className={[
-                  "rounded-full border px-5 py-3 text-sm font-black transition",
-                  isActive
-                    ? "border-cyan-300/45 bg-cyan-400/15 text-cyan-100 shadow-[0_0_28px_rgba(34,211,238,0.16)]"
-                    : "border-white/10 bg-white/[0.045] text-slate-300 hover:border-cyan-300/30 hover:bg-cyan-400/10 hover:text-cyan-100",
-                ].join(" ")}
-              >
-                {filter}
-              </button>
-            );
-          })}
+          <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+            A focused collection of AI, computer vision, data science, and
+            full-stack projects built around real problems, structured
+            solutions, and practical technical execution.
+          </p>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+            {filters.map((filter) => {
+              const isActive = activeFilter === filter;
+
+              return (
+                <button
+                  key={filter}
+                  type="button"
+                  onClick={() => setActiveFilter(filter)}
+                  className={[
+                    "rounded-full border px-5 py-3 text-sm font-black transition",
+                    isActive
+                      ? "border-cyan-300/45 bg-cyan-400/15 text-cyan-100 shadow-[0_0_28px_rgba(34,211,238,0.16)]"
+                      : "border-white/10 bg-white/[0.045] text-slate-300 hover:border-cyan-300/30 hover:bg-cyan-400/10 hover:text-cyan-100",
+                  ].join(" ")}
+                >
+                  {filter}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
-        <div className="mt-14 space-y-16">
+        <div className="mt-16 space-y-16">
           {groupedProjects.map((section) => (
             <section key={section.group}>
               <div className="mb-7 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
