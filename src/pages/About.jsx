@@ -51,22 +51,25 @@ export default function About() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, ease: "easeOut" }}
-          className="max-w-4xl"
+          className="mx-auto max-w-5xl text-center"
         >
-          <p className="text-sm font-bold uppercase tracking-[0.28em] text-cyan-300">
+          <p className="text-sm font-black uppercase tracking-[0.45em] text-cyan-300">
             About
           </p>
 
-          <h1 className="mt-5 text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-            Building intelligent software with AI, data, and clean system design.
+          <h1 className="mx-auto mt-6 max-w-5xl text-4xl font-black leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Building intelligent software with{" "}
+            <span className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              AI, data, and clean system design.
+            </span>
           </h1>
 
-          <p className="mt-7 text-base leading-8 text-slate-300 sm:text-lg">
+          <p className="mx-auto mt-8 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
             {personal.about.intro}
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
 
@@ -80,9 +83,9 @@ export default function About() {
                   ease: "easeOut",
                   delay: index * 0.06,
                 }}
-                className="rounded-[1.6rem] border border-cyan-400/15 bg-white/[0.045] p-6 backdrop-blur-2xl transition hover:-translate-y-1 hover:border-cyan-300/35 hover:bg-white/[0.065]"
+                className="rounded-[1.6rem] border border-cyan-400/15 bg-white/[0.045] p-6 text-center backdrop-blur-2xl transition hover:-translate-y-1 hover:border-cyan-300/35 hover:bg-white/[0.065]"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-400/25 bg-cyan-400/10 text-2xl text-cyan-300">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-cyan-400/25 bg-cyan-400/10 text-2xl text-cyan-300">
                   <Icon />
                 </div>
 
@@ -94,7 +97,7 @@ export default function About() {
           })}
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="mx-auto mt-16 grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +105,7 @@ export default function About() {
             transition={{ duration: 0.55, ease: "easeOut" }}
             className="rounded-[2rem] border border-cyan-400/15 bg-white/[0.045] p-7 backdrop-blur-2xl"
           >
-            <p className="text-sm font-bold uppercase tracking-[0.28em] text-purple-300">
+            <p className="text-sm font-black uppercase tracking-[0.28em] text-purple-300">
               Education
             </p>
 
@@ -148,7 +151,7 @@ export default function About() {
               </div>
 
               <div className="grid gap-3">
-                {certificates.map((certificate) => (
+                {certificates.slice(0, 5).map((certificate) => (
                   <div
                     key={certificate.name}
                     className="rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3"
